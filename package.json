@@ -17,6 +17,9 @@
     "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.0.1"
   },
+  "vue": {
+    "baseUrl": "/kata_marvel"
+  },
   "devDependencies": {
     "@types/jest": "^23.1.4",
     "@vue/cli-plugin-pwa": "^3.0.5",
