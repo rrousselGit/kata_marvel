@@ -4,7 +4,7 @@ install:
 script:
   - set -e
   - npm run test:unit -- --coverage
-  - npm run build
+  - npm run build -- --release
   - bash <(curl -s https://codecov.io/bash)
 cache:
   directories:
