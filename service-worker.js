@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.42ba19d1b3f340dd6d7165c8de43515a.js"
+  "/kata_marvel/precache-manifest.173616c9dc68e812a8955a0a7ba35a44.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue_marvel"});
