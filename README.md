@@ -8,3 +8,4 @@
 - How to inject dependency _without_ a singleton ?
 - Is the `.vue` required for imports?
 - Why do example put the `Vue.use(Router)` next to the router instead of the main?
+- Why is test coverage computed only from tested files ?
