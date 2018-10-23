@@ -3,8 +3,9 @@ install:
   - npm install
 script:
   - set -e
-  - npm run test:unit
+  - npm run test:unit -- --coverage
   - npm run build
+  - bash <(curl -s https://codecov.io/bash)
 cache:
   directories:
     - "node_modules"
