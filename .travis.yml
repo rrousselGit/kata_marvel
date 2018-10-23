@@ -4,7 +4,6 @@ install:
 script:
   - set -e
   - npm run test:unit
-build:
   - npm run build
 cache:
   directories:
