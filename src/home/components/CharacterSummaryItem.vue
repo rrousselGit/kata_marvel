@@ -25,7 +25,7 @@ export default class CharacterSummaryItem extends Vue {
 
   get thumbnail(): string {
     const { extension, path } = this.character.thumbnail;
-    return `${path}.${extension}`;
+    return `https://${path}.${extension}`;
   }
 }
 </script>
