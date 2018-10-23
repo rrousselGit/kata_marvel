@@ -1,9 +1,10 @@
 <template>
-<li>
-  <router-link v-bind:to=to>
-  <h5>{{ character.name }}</h5>
-  </router-link>
-</li>
+<router-link v-bind:to=to>
+  <el-card :body-style="{ padding: '0px' }">
+    <img :src="thumbnail" />
+    <h5>{{ character.name }}</h5>
+  </el-card>
+</router-link>
 </template>
 
 <script lang="tsx">
@@ -16,13 +17,26 @@ import Page from "@/components/Page.vue";
 })
 export default class CharacterSummaryItem extends Vue {
   @Prop()
-  character!: CharacterSummary;
+  readonly character!: CharacterSummary;
 
   get to(): string {
     return `/characters/${this.character.id.toString()}`;
+  }
+
+  get thumbnail(): string {
+    const { extension, path } = this.character.thumbnail;
+    return `${path}.${extension}`;
   }
 }
 </script>
 
 <style scoped>
+.el-card {
+  width: 230px;
+}
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 </style>

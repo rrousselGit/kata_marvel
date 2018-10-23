@@ -11,3 +11,4 @@
 - Why is test coverage computed only from tested files ?
 - How to properly deal with promises ?
 - Is it possible to have `undefined` as default value (it seems to break reactivity)?
+- formating templates ? (prettier?)

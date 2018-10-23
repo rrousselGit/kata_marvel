@@ -9,6 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "element-ui": "^2.4.8",
     "growl": ">=1.10.0",
     "https-proxy-agent": ">=2.2.0",
     "register-service-worker": "^1.0.0",

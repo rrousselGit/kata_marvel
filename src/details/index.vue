@@ -1,6 +1,9 @@
 <template>
 <Page>
-        {{ name }}
+     <router-link slot="header" to="/" >
+        <button >home</button>
+     </router-link>
+    {{ name }}
 </Page>
 </template>
 
