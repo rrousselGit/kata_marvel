@@ -1,33 +1,35 @@
 <template>
 <Page>
-  <ul  v-for="character in characters" v-bind:key="character.id">
-    <CharacterSummaryItem v-bind:character="character" />
-  </ul>
+        {{ name }}
 </Page>
 </template>
 
 <script lang="tsx">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import CharacterSummaryItem from "./components/CharacterSummaryItem.vue";
 import Page from "@/components/Page.vue";
+import { Route } from "vue-router";
 import { client } from "@/clients/marvel";
 
 @Component({
   components: {
     Page,
-    CharacterSummaryItem,
   },
 })
-export default class HelloWorld extends Vue {
-  characters: CharacterSummary[] = [];
+export default class Details extends Vue {
+  character: Partial<Character> = {};
   loading = true;
 
   async created() {
+    const id = Number.parseInt(this.$route.params.id, 10);
     try {
-      this.characters = (await client.getCharacters(0)).characters;
+      this.character = await client.getCharacter(id);
     } finally {
       this.loading = false;
     }
+  }
+
+  get name() {
+    return this.character && this.character.name;
   }
 }
 </script>

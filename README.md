@@ -9,3 +9,5 @@
 - Is the `.vue` required for imports?
 - Why do example put the `Vue.use(Router)` next to the router instead of the main?
 - Why is test coverage computed only from tested files ?
+- How to properly deal with promises ?
+- Is it possible to have `undefined` as default value (it seems to break reactivity)?
